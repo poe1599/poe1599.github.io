@@ -1,5 +1,7 @@
 body {
   font-family: GenSenRounded TW;
+  min-height: 100vh;
+  background: #fdf3c7;
 }
 
 h1 {
@@ -57,11 +59,11 @@ h6 {
 }
 
 .bg-color1 {
-  background-color: #f1e3a7 !important;
+  background-color: #9146FF !important;
 }
 
 .bg-color2 {
-  background-color: #3cb5a6 !important;
+  background-color: #f0f0f0 !important;
 }
 
 .bg-color3 {
@@ -69,7 +71,7 @@ h6 {
 }
 
 .bg-color4 {
-  background-color: #f18828 !important;
+  background-color: #fdf3c7 !important;
 }
 
 .bg-color5 {
@@ -77,11 +79,11 @@ h6 {
 }
 
 .text-color1 {
-  color: #f1e3a7 !important;
+  color: #9146FF !important;
 }
 
 .text-color2 {
-  color: #3cb5a6 !important;
+  color: #f0f0f0 !important;
 }
 
 .text-color3 {
@@ -89,10 +91,19 @@ h6 {
 }
 
 .text-color4 {
-  color: #f18828 !important;
+  color: #fdf3c7 !important;
 }
 
 .text-color5 {
   color: #55455c !important;
+}
+
+.header {
+  padding: 0.5rem 3rem;
+  min-height: 8vh;
+}
+
+.left-menu {
+  min-height: 92vh;
 }
 /*# sourceMappingURL=poe.css.map */

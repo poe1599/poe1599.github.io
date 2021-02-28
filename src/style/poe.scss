@@ -1,12 +1,14 @@
-$color1: #f1e3a7;
-$color2: #3cb5a6;
+$color1: #9146FF;
+$color2: #f0f0f0;
 $color3: #778285;
-$color4: #f18828;
+$color4: #fdf3c7;
 $color5: #55455c;
 $fontFamily: GenSenRounded TW;
 
 body{
   font-family: $fontFamily;
+  min-height: 100vh;
+  background: $color4;
 }
 
 h1 {
@@ -94,4 +96,10 @@ h6 {
 }
 
 .header {
+  padding: 0.5rem 3rem ;
+  min-height: 8vh;
+}
+
+.left-menu{
+  min-height: 92vh;
 }
