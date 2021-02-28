@@ -1,0 +1,97 @@
+$color1: #f1e3a7;
+$color2: #3cb5a6;
+$color3: #778285;
+$color4: #f18828;
+$color5: #55455c;
+$fontFamily: GenSenRounded TW;
+
+body{
+  font-family: $fontFamily;
+}
+
+h1 {
+  font-family: $fontFamily;
+  font-size: 95px !important;
+  font-weight: bold !important;
+  line-height: 95px !important;
+  letter-spacing: -1.5px;
+  text-decoration: none;
+}
+h2 {
+  font-family: $fontFamily;
+  font-size: 59px !important;
+  font-weight: 500 !important;
+  line-height: 59px !important;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+h3 {
+  font-family: $fontFamily;
+  font-size: 48px !important;
+  font-weight: bold !important;
+  line-height: 48px !important;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+
+h4 {
+  font-family: $fontFamily;
+  font-size: 34px !important;
+  font-weight: bold !important;
+  line-height: 34px !important;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+}
+
+h5 {
+  font-family: $fontFamily;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  line-height: 24px !important;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+
+h6 {
+  font-family: $fontFamily;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+  letter-spacing: 0.15px;
+  text-decoration: none;
+}
+
+.bg-color1 {
+  background-color: $color1 !important;
+}
+.bg-color2 {
+  background-color: $color2 !important;
+}
+.bg-color3 {
+  background-color: $color3 !important;
+}
+.bg-color4 {
+  background-color: $color4 !important;
+}
+.bg-color5 {
+  background-color: $color5 !important;
+}
+
+.text-color1 {
+  color: $color1 !important;
+}
+.text-color2 {
+  color: $color2 !important;
+}
+.text-color3 {
+  color: $color3 !important;
+}
+.text-color4 {
+  color: $color4 !important;
+}
+.text-color5 {
+  color: $color5 !important;
+}
+
+.header {
+}
