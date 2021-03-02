@@ -1,5 +1,5 @@
 .resume-link-icon {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .skill-list li {
@@ -41,5 +41,10 @@
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
   }
+}
+
+.avatar {
+  background: url("") center center no-repeat;
+  background-size: contain;
 }
 /*# sourceMappingURL=resume.css.map */

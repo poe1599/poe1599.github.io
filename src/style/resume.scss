@@ -1,56 +1,61 @@
-.resume-link-icon{
-    font-size: 2rem;
+.resume-link-icon {
+  font-size: 1.5rem;
 }
-.skill-list{
-    li{
-        padding-bottom: 0.5rem;
-    }
+.skill-list {
+  li {
+    padding-bottom: 0.5rem;
+  }
 }
-.mashroom{
-    background: url('../../public/img/mashroom01.gif') center center no-repeat;
-    background-size: contain;
-    -moz-animation-duration: 1s;
-    -webkit-animation-duration: 1s;
+.mashroom {
+  background: url("../../public/img/mashroom01.gif") center center no-repeat;
+  background-size: contain;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -moz-animation-name: mashroom;
   -webkit-animation-name: mashroom;
   animation-name: mashroom;
-   -moz-animation-direction: alternate;
+  -moz-animation-direction: alternate;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
   -moz-animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -moz-animation-timing-function:linear;
-  -webkit-animation-timing-function:linear;
-  animation-timing-function:linear;
+  -moz-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 @-moz-keyframes mashroom {
-    from {
-      transform: translateX(-100%);
-    }
-  
-    to {
-      transform: translateX(0px);
-    }
+  from {
+    transform: translateX(-100%);
   }
-  
-  @-webkit-keyframes mashroom {
-    from {
-        transform: translateX(-100%);
-      }
-    
-      to {
-        transform: translateX(0px);
-      }
+
+  to {
+    transform: translateX(0px);
   }
-  
-  @keyframes mashroom {
-    from {
-        transform: translateX(-100%);
-      }
-    
-      to {
-        transform: translateX(0px);
-      }
+}
+
+@-webkit-keyframes mashroom {
+  from {
+    transform: translateX(-100%);
   }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes mashroom {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.avatar {
+  background: url("") center center no-repeat;
+  background-size: contain;
+}
