@@ -7,58 +7,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="./src/style/poe.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./src/style/public.css">
+    <link rel="stylesheet" href="./src/style/resume.css">
 
     <title>Document</title>
 </head>
 
 <body>
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-color1 bg-dark header">
-        <a class="navbar-brand text-color2" href="./index.html">首頁</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse text-color2" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active text-color2">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item text-color2">
-                    <a class="nav-link" href="https://www.palettable.io/F1E3A7-3CB5A6-778285-F18828-55455C">Main
-                        Color</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+    <script src="./src/component/header.js"></script>
+    <div class="my-5">
+        <div class="container">
+            <!-- 簡介 -->
+            <div class="row my-3">
+                <div class="col-12 col-md-3 mashroom">
+                    <!-- <img data-no-retina="w-100"
+                        src="https://media.cakeresume.com/image/upload/s--eSyCv1DR--/c_fill,g_face,h_300,w_300/v1614578311/qp7izwbt2xescfw7mfan.jpg"
+                        alt="Qp7izwbt2xescfw7mfan" loading="auto"> -->
+                </div>
+                <div class="col-12 col-md-9">
+                    <h5>葉柏毅</h5>
+                    <br>
+                    <p>　　將於資策會前端工程師培訓課程結訓，擅長前端開發技術，亦了解後端串接，在受訓期間可完成專案整合，協助其他學員快速排除問題並累積自己的經驗，亦樂於分享自己的學習經驗與技術，互相提升技術能力。目標是轉職為前端工程師，並往全端工程師邁進。<br>
+                    </p>
+                    <div class="">
+                        <div class="resume-link-icon">
+                            <a class='text-color5' href="https://www.facebook.com/poe1599/">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            &nbsp; &nbsp;
+                            <a class='text-color5' href="https://github.com/poe1599">
+                                <i class="fab fa-github"></i>
+                            </a>&nbsp; &nbsp;
+                            <a class='text-color5' href="mailto:poe1599@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>&nbsp;
+                        </div>
                     </div>
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li> -->
-            </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form> -->
-        </div>
-    </nav>
-
-    <!-- content -->
-    <div class="container-fluid">
-        <div class="row justify-content-between">
-            <div class="col-2 col-sm-3 left-menu bg-dark"></div>
-            <div class="col-6"></div>
-            <div class="col-0 col-lg-3 bg-secondary"></div>
+                    <p>前端工程師、後端工程師、全端工程師<br>28歲 / 巨蟹座 / 男性 / 台灣嘉義人</p>
+                    <p>0978-0133-78</p>
+                    <p><a href="mailto:poe1599@gmail.com" target="_blank">poe1599@gmail.com</a></p>
+                </div>
+            </div>
+            <!-- 專業技能 -->
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4><b>專業技能</b></h4>
+                        </div>
+                    </div>
+                    <div class="row mt-3 skill-list">
+                        <div class="col-12 col-sm-4">
+                            <h5>Web Design</h5>
+                            <hr>
+                            <ul>
+                                <li>HTML5 / CSS3 / SCSS</li>
+                                <li>JavaScript ES6+</li>
+                                <li>RWD 響應式網⾴設計</li>
+                                <li>Material Design</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <h5>Front End</h5>
+                            <hr>
+                            <ul>
+                                <li>jQuery</li>
+                                <li>Bootstrap4</li>
+                                <li>React &amp; Hooks</li>
+                                <li>Redux</li>
+                                <li>Ajax</li>
+                                <li>Fetch</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <h5>Back End</h5>
+                            <hr>
+                            <ul>
+                                <li>Node.js / Express</li>
+                                <li>Session / JWT</li>
+                                <li>EJS 樣板</li>
+                                <li>PHP / MySQL</li>
+                                <li>XAMPP Apache</li>
+                                <li>RESTful API</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 學歷 -->
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <h4><b>學歷</b></h4>
+                        </div>
+                    </div>
+                    <div class="row" title="">
+                        <div class="col-1"></div>
+                        <div class="col-11">
+                            <h5><span class='d-inline-block mb-2'>國立嘉義大學&nbsp;</span>
+                                <br class="d-block d-sm-none">
+                                <span class='d-inline-block mb-2'>微生物免疫與生物藥學系&nbsp; &nbsp;</span>
+                                <br class="d-block d-sm-none">
+                                <span class='d-inline-block mb-2'>2011 年 9 月 - 2015 年 6 月</span>
+                            </h5>
+                            <p>　　求學期間曾進⼊蔡宗杰教授的實驗室進⾏專題研究，累積了我查閱⽂獻的經驗並增強我的分析與邏輯思考能⼒。曾擔任系所排球隊的副隊⻑，
+                                與隊友⼀起獲得2013年南部⼤專院校南⽣盃男⼦排球賽亞軍。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 工作經歷 -->
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <h4><b>工作經歷</b></h4>
+                        </div>
+                    </div>
+                    <div class="row" title="">
+                        <div class="col-1"></div>
+                        <div class="col-11">
+                            <h5>
+                                <span class='d-inline-block mb-2'>台灣三美股份有限公司&nbsp;</span>
+                                <br class="d-block d-sm-none">
+                                <span class='d-inline-block mb-2'>電控工程師&nbsp; &nbsp;</span>
+                                <br class="d-block d-sm-none">
+                                <span class='d-inline-block mb-2'>2018 年 4 月 - 2020 年 10 月</span>
+                            </h5>
+                            <p>　　生產機台的PLC控制迴路配線, PLC控制程序設計、維護等。掌握Koyo與Keyence兩套PLC設計語言。能夠因應生產需求與突發狀況快速查修或改動程序架構。<br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 專業訓練 -->
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <h4><b>專業訓練</b></h4>
+                        </div>
+                    </div>
+                    <div class="row" title="">
+                        <div class="col-1"></div>
+                        <div class="col-11">
+                            <h5>
+                                <span class='d-inline-block mb-2'>資策會&nbsp;</span>
+                                <br class="d-block d-sm-none">
+                                <span class='d-inline-block mb-2'>前端⼯程師就業養成班&nbsp; &nbsp;</span>
+                                <br class="d-block d-sm-none">
+                                <span class='d-inline-block mb-2'>2020 年 10 月 - 2021 年 3 月</span>
+                            </h5>
+                            <p>　　有賴於前段的⼯作經驗，讓我在受訓期間學習新的語⾔時，基礎概念能⽐其他⼈更快建⽴，我也樂於協助其他學員在遭遇問題時⼀同討論如何解決，讓我能夠更快掌握其他⼈寫作時的邏輯並協助其他學員進⾏除錯，過程中更加深我對基礎知識的印象。在期中的專題發表時，我就能獨自以PHP搭配MySQL資料庫建⽴⼀個⼩型的店家網站，有完整的會員註冊、商品列表與購物⾞功能，此⼀成果更加提⾼我對學習前端的⾃信⼼。
+                            </p>
+                            <p>　　⽽在期末專題則使⽤了React作為前端，搭配Node /
+                                Express做為後端。我主要負責購物車相關的頁面功能與整合專案中的共用元件，前端從操作虛擬DOM與事件處理到後端撰寫路由與串接MySQL資料庫進⾏資料處理，讓我不僅熟悉資料處理與串接，還可以協助組員整合專題的程式碼，並針對⼀些使⽤技術提出不同的解決⽅案，並且樂於分享⾃⼰的寫作知識。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
