@@ -47,4 +47,58 @@
   background: url("") center center no-repeat;
   background-size: contain;
 }
+
+.skill-box {
+  animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-name: skill-box;
+  -moz-animation-name: skill-box;
+  -webkit-animation-name: skill-box;
+  animation-direction: normal;
+  -moz-animation-direction: normal;
+  -webkit-animation-direction: normal;
+  animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -webkit-animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes skill-box {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes skill-box {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes skill-box {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
 /*# sourceMappingURL=resume.css.map */

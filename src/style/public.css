@@ -59,7 +59,7 @@ h6 {
 }
 
 .bg-color1 {
-  background-color: #9146FF !important;
+  background-color: #9146ff !important;
 }
 
 .bg-color2 {
@@ -79,7 +79,7 @@ h6 {
 }
 
 .text-color1 {
-  color: #9146FF !important;
+  color: #9146ff !important;
 }
 
 .text-color2 {
@@ -96,5 +96,17 @@ h6 {
 
 .text-color5 {
   color: #55455c !important;
+}
+
+.goTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #9146ff;
+  position: fixed;
+  right: 5vw;
+  bottom: 5vw;
+  line-height: 50px;
+  text-align: center;
 }
 /*# sourceMappingURL=public.css.map */
