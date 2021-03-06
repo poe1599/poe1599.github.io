@@ -19,6 +19,7 @@ h1 {
   letter-spacing: -1.5px;
   text-decoration: none;
 }
+
 h2 {
   font-family: $fontFamily;
   font-size: 59px !important;
@@ -27,6 +28,7 @@ h2 {
   letter-spacing: -0.5px;
   text-decoration: none;
 }
+
 h3 {
   font-family: $fontFamily;
   font-size: 48px !important;
@@ -66,15 +68,19 @@ h6 {
 .bg-color1 {
   background-color: $color1 !important;
 }
+
 .bg-color2 {
   background-color: $color2 !important;
 }
+
 .bg-color3 {
   background-color: $color3 !important;
 }
+
 .bg-color4 {
   background-color: $color4 !important;
 }
+
 .bg-color5 {
   background-color: $color5 !important;
 }
@@ -82,15 +88,19 @@ h6 {
 .text-color1 {
   color: $color1 !important;
 }
+
 .text-color2 {
   color: $color2 !important;
 }
+
 .text-color3 {
   color: $color3 !important;
 }
+
 .text-color4 {
   color: $color4 !important;
 }
+
 .text-color5 {
   color: $color5 !important;
 }
@@ -125,6 +135,19 @@ h6 {
   height: 100vh;
   background: $color1;
   color: $color2;
+
+  >ul {
+    margin-top: 2rem;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 1rem;
+
+      a {
+        color: $color2;
+      }
+    }
+  }
 }
 
 .left-menu-tag {
@@ -133,4 +156,7 @@ h6 {
   background: $color1;
   color: $color2;
   border-radius: 0 10px 10px 0;
+  line-height: 100px;
+  text-align: center;
+  transition: .5s;
 }

@@ -31,7 +31,7 @@
                     <h4>葉柏毅</h4>
                     <br>
                     <!-- <h5>前端工程師、後端工程師、全端工程師</h5> -->
-                    <p>　　將於資策會前端工程師培訓課程結訓，擅長前端開發技術，亦了解後端串接，在受訓期間可完成專案整合，協助其他學員快速排除問題並累積自己的經驗，亦樂於分享自己的學習經驗與技術，互相提升技術能力。目標是轉職為前端工程師，並往全端工程師邁進。<br>
+                    <p>　　於資策會前端工程師培訓課程結訓，擅長前端開發技術，亦了解後端串接，在受訓期間可完成專案整合，協助其他學員快速排除問題並累積自己的經驗，亦樂於分享自己的學習經驗與技術，互相提升技術能力。目標是轉職為前端工程師，並往全端工程師邁進。<br>
                     </p>
                     <div class="mb-2">
                         <div class="resume-link-icon">
@@ -39,7 +39,7 @@
                                 <i class="fab fa-facebook"></i>
                             </a>
                             &nbsp; &nbsp;
-                            <a class='text-color5' href="https://poe1599.github.io/">
+                            <a class='text-color5' href="https://github.com/poe1599">
                                 <i class="fab fa-github"></i>
                             </a>&nbsp; &nbsp;
                             <a class='text-color5' href="mailto:poe1599@gmail.com">
@@ -177,8 +177,19 @@
 
     <!-- 左側選單 -->
     <div class="left-menu d-flex">
-        <div class="left-menu-body"></div>
-        <div class="left-menu-tag"></div>
+        <div class="left-menu-body">
+            <ul>
+                <li><a href="https://poe1599.github.io/">葉柏毅的履歷</a></li>
+                <li>資策會期末專題</li>
+                <ul>
+                    <li><a href="https://github.com/Liu-Lydia/simple-meal">前端專案</a></li>
+                    <li><a href="https://github.com/poe1599/SimpleMeal-node">後端專案</a></li>
+                </ul>
+            </ul>
+        </div>
+        <div class="left-menu-tag">
+            <i class="fas fa-chevron-right"></i>
+        </div>
 
     </div>
 
@@ -188,12 +199,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script> -->
 
     <script>
 
-        // const educationBox = document.querySelector('.education-box');
-
+        // 左側選單開閉
         $('.left-menu-tag').on('click', () => {
             $('.left-menu').toggleClass('left-menu-active')
         })
@@ -205,9 +215,6 @@
                 top: 0,
                 behavior: "smooth"
             })
-
-            Swal.fire('Any fool can use a computer')
-
         });
 
 
