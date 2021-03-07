@@ -44,8 +44,8 @@
 }
 
 .avatar {
-  background: url("") center center no-repeat;
-  background-size: contain;
+  overflow: hidden;
+  max-height: 300px;
 }
 
 .skill-box {

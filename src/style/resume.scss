@@ -1,11 +1,13 @@
 .resume-link-icon {
   font-size: 1.5rem;
 }
+
 .skill-list {
   li {
     padding-bottom: 0.5rem;
   }
 }
+
 .mashroom {
   background: url("../../public/img/mashroom01.gif") center center no-repeat;
   background-size: contain;
@@ -25,6 +27,7 @@
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
+
 @-moz-keyframes mashroom {
   from {
     transform: translateX(-100%);
@@ -56,8 +59,8 @@
 }
 
 .avatar {
-  background: url("") center center no-repeat;
-  background-size: contain;
+  overflow: hidden;
+  max-height: 300px;
 }
 
 .skill-box {
@@ -85,6 +88,7 @@
   -moz-animation-timing-function: ease-in;
   -webkit-animation-timing-function: ease-in;
 }
+
 @keyframes skill-box {
   from {
     transform: translateX(-100%);
@@ -94,6 +98,7 @@
     transform: translateX(0px);
   }
 }
+
 @-moz-keyframes skill-box {
   from {
     transform: translateX(-100%);
@@ -103,6 +108,7 @@
     transform: translateX(0px);
   }
 }
+
 @keyframes skill-box {
   from {
     transform: translateX(-100%);
@@ -113,5 +119,4 @@
   }
 }
 
-.education-box {
-}
+.education-box {}
