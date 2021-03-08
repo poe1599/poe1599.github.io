@@ -117,6 +117,7 @@ h6 {
   text-align: center;
   font-size: 24px;
   color: $color2;
+  transition: .5s;
 }
 
 .left-menu {
@@ -172,6 +173,10 @@ h6 {
   left: 0;
   transform: translate(-50%, -50%);
   pointer-events: none;
+
+  @media (max-width: 380px) {
+    display: none;
+  }
 }
 
 
@@ -183,6 +188,10 @@ h6 {
   position: fixed;
   left: 50%;
   top: 50%;
+
+  @media (max-width: 380px) {
+    display: none;
+  }
 
   .ball {
     width: 10px;

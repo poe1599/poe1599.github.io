@@ -110,6 +110,8 @@ h6 {
   text-align: center;
   font-size: 24px;
   color: #f0f0f0;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .left-menu {
@@ -170,6 +172,12 @@ h6 {
   pointer-events: none;
 }
 
+@media (max-width: 380px) {
+  .stalker {
+    display: none;
+  }
+}
+
 .rotateBall {
   pointer-events: none;
   -webkit-animation: rotateBall 3s linear infinite;
@@ -179,6 +187,12 @@ h6 {
   position: fixed;
   left: 50%;
   top: 50%;
+}
+
+@media (max-width: 380px) {
+  .rotateBall {
+    display: none;
+  }
 }
 
 .rotateBall .ball {
