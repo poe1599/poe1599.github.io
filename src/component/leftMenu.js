@@ -24,4 +24,5 @@ document.body.appendChild(menu.content);
  // 左側選單開閉
  $('.left-menu-tag').on('click', () => {
     $('.left-menu').toggleClass('left-menu-active')
+    $('.fa-chevron-right').toggleClass('rotateArrow')
 })
