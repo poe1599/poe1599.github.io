@@ -169,4 +169,68 @@ h6 {
           transform: translate(-50%, -50%);
   pointer-events: none;
 }
+
+.rotateBall {
+  pointer-events: none;
+  -webkit-animation: rotateBall 3s linear infinite;
+          animation: rotateBall 3s linear infinite;
+  width: 80px;
+  height: 10px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+}
+
+.rotateBall .ball {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(134, 228, 170, 0.6);
+}
+
+@-webkit-keyframes rotateBall {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateBall {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 /*# sourceMappingURL=public.css.map */

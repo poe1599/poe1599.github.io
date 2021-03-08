@@ -173,3 +173,44 @@ h6 {
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
+
+
+.rotateBall {
+  pointer-events: none;
+  animation: rotateBall 3s linear infinite;
+  width: 80px;
+  height: 10px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+
+  .ball {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(134, 228, 170, 0.6);
+
+  }
+}
+
+@keyframes rotateBall {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
