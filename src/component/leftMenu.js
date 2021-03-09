@@ -11,6 +11,8 @@ menu.innerHTML = `
                 <li><a href="https://github.com/Liu-Lydia/simple-meal">前端專案</a></li>
                 <li><a href="https://github.com/poe1599/SimpleMeal-node">後端專案</a></li>
             </ul>
+            <li><a href="/src/pages/todolist.html">Todolist</a></li>
+            
         </ul>
     </div>
     <div class="left-menu-tag">
