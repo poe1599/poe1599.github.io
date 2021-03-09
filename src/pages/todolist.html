@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="/src/style/public.css">
+    <link rel="stylesheet" href="/src/style/todolist.css">
+    <title>TodoList</title>
+</head>
+
+<body>
+    <div class="container px-5">
+        <div class="row mt-5">
+            <h4>TodoList</h4>
+        </div>
+        <div class="row justify-content-between mt-3">
+            <div class="col-12 col-md-5 my-2">
+                <h6>填寫待辦事項</h6>
+                <div>
+                    <form id='todoForm' onsubmit='setTodoData(); return false;'>
+                        <div class="mb-2">
+                            <label for="todo">待辦事項</label>
+                            <textarea class="w-100" name="todo" id="" cols="30" rows="3"></textarea>
+                        </div>
+                        <div class="text-right">
+                            <button class="btn btn-primary my-2">確認</button>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <p>使用說明：</p>
+                    <p>在上方"待辦事項"填寫代辦內容，按下"確認"即可產生新的"待辦事項清單"。點擊清單的事項會產生"完成"與"刪除"按鈕。</p>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-md-5 my-2">
+                <h6>待辦事項清單</h6>
+                <ul id='todolist-ul'>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+
+    <!-- 左側選單 -->
+    <script src="/src/component/leftMenu.js"></script>
+    <!-- 上滑按鈕 -->
+    <script src="/src/component/goTop.js"></script>
+    <!-- 滑鼠追蹤 -->
+    <script src="/src/component/stalker.js"></script>
+
+    <script>
+        // 生成待辦事項
+        function setTodoList() {
+            const array = JSON.parse(localStorage.getItem('todoArray')) || []
+            const todolistUl = document.querySelector('#todolist-ul')
+            todolistUl.innerHTML = ''
+            array.map((v, i) => {
+                todolistUl.innerHTML += `
+            <li class="list-item mb-3">
+                <div class="list-item-content mb-2 ${v.check ? 'complete' : ''}"  onclick='changeBtnShow(${i})'>${v.todo}</div>
+                <div class="text-right mb-2">
+                    <span>${v.date}</span>
+                </div>
+                <div class='list-item-btn text-right d-none'>
+                    <button class="btn btn-success" onclick='setTodoCheck(${i})'>完成</button>
+                    <button class="btn btn-warning mx-2 d-none">修改</button>
+                    <button class="btn btn-danger" onclick='deleteTodo(${i})'>刪除</button>
+                </div>
+            </li>`
+            })
+        }
+
+        setTodoList()
+
+        // 變更完成狀態(刪除線)
+        function setTodoCheck(i) {
+            const newArray = JSON.parse(localStorage.getItem('todoArray')) || []
+            newArray[i].check = !newArray[i].check
+            localStorage.setItem('todoArray', JSON.stringify(newArray))
+            $('.list-item-content').eq(i).toggleClass('complete')
+            changeBtnShow(i)
+        }
+
+        // 刪除待辦
+        function deleteTodo(i) {
+            const newArray = JSON.parse(localStorage.getItem('todoArray'))
+            newArray.splice(i, 1)
+            localStorage.setItem('todoArray', JSON.stringify(newArray))
+            setTodoList()
+        }
+
+        // 改變按鈕顯示
+        function changeBtnShow(i) {
+            $('.list-item-btn').eq(i).toggleClass('d-none')
+        }
+
+        // 寫入待辦事項
+        function setTodoData() {
+            const todo = document.getElementsByName('todo')[0]
+            const date = document.getElementsByName('date')[0]
+            const time = document.getElementsByName('time')[0]
+
+            // 檢查填入
+            if (todo.value.trim() === '') {
+                todo.placeholder = '請填入事項'
+                todo.style.border = 'red 2px solid'
+            } else {
+                todo.placeholder = ''
+                todo.style.border = ''
+            }
+
+            // 如果有輸入內容, 將內容放到localStorage
+            if (todo.value.trim() !== '') {
+                // 日期格式
+                const date = new Date().
+                    toLocaleString('en-us', { year: 'numeric', month: '2-digit', day: '2-digit' }).
+                    replace(/(\d+)\/(\d+)\/(\d+)/, '$3-$1-$2');
+
+
+                const obj = {
+                    todo: todo.value,
+                    date: date,
+                    check: false
+                }
+                const newArray = JSON.parse(localStorage.getItem('todoArray')) || []
+                newArray.push(obj)
+                localStorage.setItem('todoArray', JSON.stringify(newArray))
+            }
+
+            setTodoList()
+
+            // 清空
+            todo.value = ''
+        }
+
+
+
+    </script>
+</body>
+
+</html>
