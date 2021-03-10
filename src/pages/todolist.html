@@ -37,7 +37,7 @@
                 </div>
                 <div>
                     <p>使用說明：</p>
-                    <p>在上方"待辦事項"填寫代辦內容，按下"確認"即可產生新的"待辦事項清單"。點擊清單的事項會產生"完成"與"刪除"按鈕。</p>
+                    <p>在上方"待辦事項"填寫代辦內容，按下"確認"即可產生新的"待辦事項清單"。點擊清單的事項會產生"修改"、"完成"與"刪除"按鈕。</p>
 
                 </div>
 
@@ -78,10 +78,15 @@
                 <div class="text-right mb-2">
                     <span>${v.date}</span>
                 </div>
-                <div class='list-item-btn text-right d-none'>
-                    <button class="btn btn-success" onclick='setTodoCheck(${i})'>完成</button>
-                    <button class="btn btn-warning mx-2 d-none">修改</button>
-                    <button class="btn btn-danger" onclick='deleteTodo(${i})'>刪除</button>
+               
+                <div class='list-item-btn text-nowrap text-right d-none'>
+                    <div class='modify mb-3 d-none'>
+                        <input class='w-100' type='text' value='${v.todo}'><br>
+                    </div>
+                    <button class="btn btn-primary mx-1 mdSub d-none" onclick='setModify(${i})'>送出</button>
+                    <button class="btn btn-warning mx-1" onclick='clickModify(${i})'>修改</button>
+                    <button class="btn btn-success mx-1" onclick='setTodoCheck(${i})'>完成</button>
+                    <button class="btn btn-danger mx-1" onclick='deleteTodo(${i})'>刪除</button>
                 </div>
             </li>`
             })
@@ -109,6 +114,21 @@
         // 改變按鈕顯示
         function changeBtnShow(i) {
             $('.list-item-btn').eq(i).toggleClass('d-none')
+        }
+
+        // 叫出修改
+        function clickModify(i) {
+            $('.modify').eq(i).toggleClass('d-none')
+            $('.mdSub').eq(i).toggleClass('d-none').next().toggleClass('d-none')
+        }
+
+        // 送出修改
+        function setModify(i) {
+            const newArray = JSON.parse(localStorage.getItem('todoArray'))
+            // console.log()
+            newArray[i].todo = $('.modify').eq(i).children().first().val()
+            localStorage.setItem('todoArray', JSON.stringify(newArray))
+            setTodoList()
         }
 
         // 寫入待辦事項
